@@ -1,0 +1,206 @@
+/* Dans config mettre peut etre taille standard pour les p */
+
+/* Config projet : font, color, reset */
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@700&family=Lato&family=Martel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@700&family=Lato&family=Martel:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@700&family=Catamaran&family=Lato&family=Martel:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@700&family=Catamaran&family=Gudea&family=Lato&family=Martel:wght@400;600&display=swap');
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.page-container {
+    font-size: 1em;
+    font-family: 'Martel', serif;
+}
+
+h1 {
+    font-family: 'Atma', cursive;
+}
+
+h2, h3, h4 {
+    font-family: 'Catamaran', sans-serif;
+    font-size: 35px;
+}
+
+h3, h4 {
+    font-size: 20px;
+}
+
+/* Header */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #d4a276;
+}
+
+header nav {
+    width: 80%;
+    margin: 10px;
+}
+
+header nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+header li {
+    font-size: 1.7em;
+    font-family: 'Gudea', sans-serif;
+}
+
+header p {
+    font-size: 1.1em;
+    margin: 10px;
+}
+
+/* Banner */
+.banner{
+    display: flex;
+    padding: 20px;
+    background-color: #f5f3f4;
+}
+
+.banner img {
+    width: 80%;
+}
+
+.banner p {
+    font-size: 1.6em;
+    text-align: center;
+    margin: auto;
+    padding-left: 15px;
+}
+
+/* Article information */
+.information-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.information-container h2 {
+    /* font-size: 1.9em; */
+    padding: 10px 0
+}
+
+.information__array {
+    width: 100%;
+}
+
+.information__array table {
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.information__array table td {
+    /* Mettre couleur palette de couleur gris clair pour border*/
+    border: 1px solid grey;
+    padding: 30px;
+}
+
+.information__array table td:first-child{
+    width: 20%;
+}
+
+.information__text {
+    text-align: center;
+    padding: 25px 0;
+}
+
+/* Article mes bon plans - grid */
+.bon-plan-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px 100px repeat(3, 1fr) 60px ;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f2f4f6;
+}
+
+.bon-plan-container h2 {
+    grid-column: 1 / span 2;
+    text-align: center;
+    /* font-size: 1.9em; */
+}
+
+.bon-plan__introduction {
+    grid-column: 1 / span 2;
+    margin: auto;
+    text-align: center;
+}
+
+.bon-plan__item {
+    height: 300px;
+    width: 400px;
+    background-color: #f3d5b5;
+    border-radius: 20px;
+    box-shadow: 1px 1px 4px #d4a276;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center
+}
+
+.bon-plan__item a {
+    font-size: 0.8em;
+}
+
+.bon-plan__conclusion{
+    grid-column: 1 / span 2;
+    margin: auto;
+    text-align: center;
+}
+
+/* Footer */
+footer{
+    display: flex;
+    background-color: #d4a276;
+}
+
+footer h4{
+    text-align: center;
+}
+
+.link-container{
+    width: 80%;
+}
+
+.link-container nav{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-container{
+    width: 20%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.private{
+    opacity: 0;
+}
