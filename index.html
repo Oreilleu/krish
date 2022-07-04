@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,6 +46,19 @@
         <div class="banner">
             <img src="./img/villa.jpg" alt="Villa à NDangane">
             <p>N'dangane est un village situé à 2h de Dakar, 1h30 de Saly, 4h de Saint Louis et environs 6000 kms de la France.</p>
+        </div>
+        <div id="popup" class="overlay">
+            <div class="popup">
+                <a href="#" class="cross">&times;</a>
+                <h3>Convertisseur Euros - Franc CFA</h3>
+                <form class="popup__form">
+                    <label for="euro">Entrer une valeur en euros</label>
+                    <input type="number" id="euro" value="1">
+                    <label for="cfa">Entrer une valeur en Franc CFA</label>
+                    <input type="number" id="cfa" value="654.15"  data-taux="654.15">
+                </form>
+                <p class="popup__info">Le taux EUR - Franc CFA n'étant pas publié officiellement par la Banque de france ou la banque centrale européenne, le taux de change est susceptible de varier très légèrement</p>
+            </div>
         </div>
         <article class="information-container">
             <h2 id="anchor-info">Information</h2>
@@ -135,7 +148,7 @@
                         <li><a href="https://flyairsenegal.com/">Air Sénégal</a></li>
                         <li><a href="https://fr.wikipedia.org/wiki/%C3%8Ele_de_Gor%C3%A9e">Ile de gorée</a></li>
                         <li><a href="https://www.au-senegal.com/monument-de-la-renaissance-africaine,2832.html">Monument de la renaissance africaine</a></li>
-                        <li><a href="#">Convertisseur monnaie</a></li>
+                        <li><a href="#popup">Convertisseur monnaie</a></li>
                     </ul>
                 </nav>
             </section>
@@ -147,4 +160,5 @@
         </footer>
     </div>
 </body>
+<script src="./script.js"></script>
 </html>
