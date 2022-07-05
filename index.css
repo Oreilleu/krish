@@ -40,6 +40,13 @@ h3, h4 {
     font-size: 20px;
 }
 
+@media (max-width: 570px) {
+    .page-container {
+        font-size: 0.7em;
+        font-family: 'Martel', serif;
+    }
+}
+
 /* Header */
 header{
     display: flex;
@@ -47,7 +54,6 @@ header{
     align-items: center;
     padding: 10px;
     background-color: #d4a276;
-
 }
 
 header nav {
@@ -59,6 +65,7 @@ header nav ul {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 header li {
@@ -78,6 +85,23 @@ header p {
     margin: 10px;
 }
 
+@media (max-width: 740px) {
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    header p {
+        font-size: 0.9em;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    header li {
+        font-size: 1.3em;
+        margin: 0 7px;
+    }
+}
+
 /* Banner */
 .banner{
     display: flex;
@@ -90,11 +114,39 @@ header p {
 }
 
 .banner p {
+    width: 20%;
     font-size: 1.6em;
     text-align: center;
     margin: auto;
     padding-left: 15px;
 }
+
+@media (max-width: 1024px) {
+    .banner {
+        padding: 10px;
+    }
+
+    .banner p {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 880px) {
+    .banner p {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 475px) {
+    .banner p {
+        display: none;
+    }
+    .banner img {
+        width: 100%;
+    }
+}
+
+
 
 /* Overlay convertisseur */
 .overlay{
@@ -198,6 +250,24 @@ header p {
     padding: 25px 0;
 }
 
+@media (max-width: 1024px) {
+    .information-container {
+        padding: 0 20px;
+    }
+    .information__array table td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 740px) {
+    .information__array {
+        display: none;
+    }
+    .information__text {
+        padding-top: 0;
+    }
+}
+
 /* Article mes bon plans - grid */
 .bon-plan-container {
     display: grid;
@@ -245,10 +315,33 @@ header p {
     text-align: center;
 }
 
+@media (max-width: 1024px) {
+    .bon-plan-container {
+        grid-template-rows: 50px 110px repeat(3, 1fr) 80px ;
+    }
+}
+
+@media (max-width: 880px) {
+    .bon-plan-container {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: #f2f4f6;
+    }
+
+    .bon-plan__item {
+        height: 300px;
+        width: 80%;
+    }
+}
+
+
+
 /* Footer */
 footer{
     display: flex;
     background-color: #d4a276;
+    padding: 10px;
 }
 
 footer h4{
@@ -264,14 +357,33 @@ footer h4{
     justify-content: space-around;
 }
 
+.link-container nav ul:first-child{
+    margin-right: 10px;
+}
+
+.link-container a:hover {
+    text-decoration: underline;
+} 
+
 .contact-container{
     width: 20%;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .private{
     opacity: 0;
+}
+
+@media (max-width: 780px) {
+    .contact-container {
+        display: none;
+    }
+
+    .link-container{
+        width: 100%;
+        font-size: 0.8em;
+    }
 }
